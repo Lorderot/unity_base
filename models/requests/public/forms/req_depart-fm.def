@@ -10,6 +10,7 @@ exports.formDef = {
     { attributeName: 'name' /* Department Name */},
     { attributeName: 'postAddr' /* Department Address */},
     { attributeName: 'phoneNum' /* Department Phone */},
+    { attributeName: "roleInSystem" /*Role in System*/},
 
     // Detail grid SubDepartment
     {

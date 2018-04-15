@@ -66,9 +66,13 @@
     "caption": "Status",
     "allowNull": false
      }
-},
- "mixins": { // the mandatory section (can be empty)
-  "mStorage": {  
+  },
+  "mixins": {
+    "mStorage": {
+      "simpleAudit": true
+    },
+    "rls": {
+      "expression": "'(' + $.currentOwner() + ' OR ' + '[department.roleInSystem] in (' + Session.userRoles + '))'"
+    }
   }
- }
 }

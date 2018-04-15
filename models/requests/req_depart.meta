@@ -27,7 +27,14 @@
      "description": "Department Phone",
      "allowNull": false,
      "isMultiLang": false
+   },
+   "roleInSystem": {
+     "dataType": "Entity",  
+     "associatedEntity": "uba_role", // association with other entity 
+     "caption": "Role in System", // caption of the object on AdminUI  
+     "allowNull": true //it can be empty.
    }
+
 
 },
  "mixins": { // the mandatory section (can be empty)
