@@ -1,0 +1,30 @@
+// @! "do not remove comments below unless you know what you do!"
+// @isDefault "false"
+// @entity "req_depart"
+// @model "RequestList"
+// @formType "auto"
+// @caption "Departments"
+// @description "Departments"
+exports.formDef = {
+  items: [
+    { attributeName: 'name' /* Department Name */},
+    { attributeName: 'postAddr' /* Department Address */},
+    { attributeName: 'phoneNum' /* Department Phone */},
+
+    // Detail grid SubDepartment
+    {
+      xtype: 'ubdetailgrid',
+      title: 'Subdepartments',
+      entityConfig: {
+        entity: "req_subDepart", // Associated entity
+        method: "select",
+        fieldList: [ // Displaying fields
+          "ID",
+          "name"
+        ]
+      },
+      masterFields: ["ID"],
+      detailFields: ["department"]    // Assotiated field
+    }
+  ]
+};

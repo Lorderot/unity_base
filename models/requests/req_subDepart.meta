@@ -6,8 +6,8 @@
    "name": {
      "dataType": "String",
      "size": 255,
-     "caption": "Department Name",
-     "description": "Department Name",
+     "caption": "SubDepartment Name",
+     "description": "SubDepartment Name",
      "allowNull": false,
      "isMultiLang": false
    },
