@@ -4253,3 +4253,4 @@ c:\UnityBase\UB.exe 4.0.0.0 (2018-02-22 16:30:16)Host=WDFN34211327A User=D07186
 20180415 21200822  % call  	endpoint models
 20180415 21200822  % http  	127.0.0.1 <- 200
 20180415 21200822  %  -    00.000.394
+20180416 06550645  ! info  ubApp.TubApp(02D03EE0) {   "ClientsCurrent": 1,   "ClientsMax": 1,   "Invalid": 0,   "Responses": 324,   "Modified": 0,   "IncomingBytes": 375208,   "OutcomingBytes": 262222,   "OutcomingFiles": 223,   "ServiceCalls": 323,   "ProcessTime": "6.48s"  }

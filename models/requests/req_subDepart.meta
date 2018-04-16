@@ -20,7 +20,8 @@
 
     },
  "mixins": { // the mandatory section (can be empty)
-  "mStorage": {
-          }
+     "mStorage": {
+         "safeDelete": true //add attr mi_deleteDate and mi_createUset to entity
+     }
  }
 }
