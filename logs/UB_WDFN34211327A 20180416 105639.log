@@ -1115,3 +1115,174 @@ c:\UnityBase\UB.exe 4.0.0.0 (2018-02-22 16:30:16)Host=WDFN34211327A User=D07186
 20180416 08570811  &  -    	00.000.005
 20180416 08570811  & http  	127.0.0.1 <- 200
 20180416 08570811  &  -    00.003.394
+20180416 09041307  "  +    ubql
+20180416 09041307  " http  	127.0.0.1 -> POST ubql
+20180416 09041307  " http  	[{"entity":"ubm_navshortcut","method":"select","fieldList":["ID","cmdCode"],"whereList":{"c1":{"expression":"[ID]","condition":"equal","values":{"c1":335775710838895}}}}]
+20180416 09041307  " auth  	admin/142472899
+20180416 09041307  " call  	endpoint ubql
+20180416 09041307  "  +    	ubMixinClasses.TubRLSMixin(02DC4E20).MixinMethod
+20180416 09041307  " debug 		ubm_navshortcut.select(TubRLSMixin)
+20180416 09041307  " debug 		Prepare RLS expression for ubm_navshortcut
+20180416 09041307  "  +    		ubApp.TubDataStore(0DEBFCD0).Init
+20180416 09041307  "  +    			ubApp.TubApp(02D73EE0).DBExecute
+20180416 09041307  "  +    				ubApp.TubApp(02D73EE0).TubApp.InternalDBExecute
+20180416 09041307  " SQL   					ubDBSQLite3ThreadSafe.TubSQLite3Statement(18609900) select ID, name FROM uba_role
+20180416 09041307  "  -    				00.000.058
+20180416 09041307  "  -    			00.000.187
+20180416 09041307  " debug 			Query result for entity "uba_role" into data name "": row count=9
+20180416 09041307  "  -    		00.000.202
+20180416 09041307  "  -    	00.001.353
+20180416 09041307  "  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09041307  " debug 		ubm_navshortcut.select(TubStorageMixin)
+20180416 09041307  "  +    		ubApp.TubDataStore(0DEBDE30).Init
+20180416 09041307  "  +    			ubApp.TubApp(02D73EE0).DBExecute
+20180416 09041307  "  +    				ubApp.TubApp(02D73EE0).TubApp.InternalDBExecute
+20180416 09041307  " debug 					P1: Int64		335775710838895
+20180416 09041307  " debug 					P2: Int64		10
+20180416 09041307  " debug 					P3: Int64		10
+20180416 09041307  " debug 					P4: DateTime	9999-12-31T00:00:00
+20180416 09041307  " SQL   					ubDBSQLite3ThreadSafe.TubSQLite3Statement(18609E40) SELECT A01.ID,A01.cmdCode  FROM ubm_navshortcut A01  WHERE A01.ID=? AND (( A01.mi_owner = ? ) OR                (1=1) OR                              exists (select 1 from ubm_navshortcut_adm admsubtable where admsubtable.instanceID = A01.ID and admsubtable.admSubjID in (select ur.RoleID from uba_userrole ur where ur.UserID = ? union select 10))) AND A01.mi_deleteDate=?
+20180416 09041307  "  -    				00.000.110
+20180416 09041307  "  -    			00.000.194
+20180416 09041307  " debug 			Query result for entity "ubm_navshortcut" into data name "": row count=1
+20180416 09041307  "  -    		00.000.217
+20180416 09041307  "  -    	00.000.356
+20180416 09041307  " http  	127.0.0.1 <- 200
+20180416 09041307  "  -    00.002.118
+20180416 09041319  '  +    ubql
+20180416 09041319  ' http  	127.0.0.1 -> POST ubql
+20180416 09041319  ' http  	[{"entity":"ubs_report","method":"select","fieldList":["ID","model","report_code","name","mi_modifyDate"],"version":"-1"}]
+20180416 09041319  ' auth  	admin/142472899
+20180416 09041319  ' call  	endpoint ubql
+20180416 09041319  ' http  	127.0.0.1 <- 200
+20180416 09041319  '  -    00.008.196
+20180416 09041846  )  +    getDocument
+20180416 09041846  ) http  	127.0.0.1 -> POST getDocument
+20180416 09041846  ) http  	{"id":63985282,"entity":"ubm_form","attribute":"formDef"}
+20180416 09041846  ) auth  	admin/142472899
+20180416 09041846  ) call  	endpoint getDocument
+20180416 09041846  (  +    getDocument
+20180416 09041846  ( http  	127.0.0.1 -> POST getDocument
+20180416 09041846  ( http  	{"id":63985282,"entity":"ubm_form","attribute":"formCode"}
+20180416 09041846  ( auth  	admin/142472899
+20180416 09041846  ( call  	endpoint getDocument
+20180416 09041849  ) http  	127.0.0.1 <- 200
+20180416 09041849  ( http  	127.0.0.1 <- 200
+20180416 09041849  (  -    00.047.524
+20180416 09041849  )  -    00.048.444
+20180416 09041856  $  +    ubql
+20180416 09041856  $ http  	127.0.0.1 -> POST ubql
+20180416 09041856  $ http  	[{"entity":"ubs_report","alsNeed":false,"fieldList":["model","report_code","name","template","code","ID","mi_modifyDate"],"method":"addnew"}]
+20180416 09041856  $ auth  	admin/142472899
+20180416 09041856  $ call  	endpoint ubql
+20180416 09041856  $  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09041856  $ debug 		ubs_report.addnew(TubStorageMixin)
+20180416 09041856  $  -    	00.000.044
+20180416 09041856  $ http  	127.0.0.1 <- 200
+20180416 09041856  $  -    00.000.526
+20180416 09041857  #  +    clientRequire/@unitybase/adminui-pub/dist/adminui.0.min.js
+20180416 09041857  # http  	127.0.0.1 -> GET clientRequire/@unitybase/adminui-pub/dist/adminui.0.min.js
+20180416 09041857  # call  	endpoint clientRequire
+20180416 09041857  # info  	Call clientRequire 
+20180416 09041857  # http  	127.0.0.1 <- 200
+20180416 09041857  #  -    00.001.855
+20180416 09044438  %  +    models/adminui-pub/locale/tinymce/en.js
+20180416 09044438  % http  	127.0.0.1 -> GET models/adminui-pub/locale/tinymce/en.js
+20180416 09044438  % call  	endpoint models
+20180416 09044438  % http  	127.0.0.1 <- 200
+20180416 09044438  %  -    00.000.864
+20180416 09044440  &  +    clientRequire/tinymce//skins/lightgray/skin.min.css
+20180416 09044440  & http  	127.0.0.1 -> GET clientRequire/tinymce//skins/lightgray/skin.min.css
+20180416 09044440  & call  	endpoint clientRequire
+20180416 09044440  & info  	Call clientRequire 
+20180416 09044440  & http  	127.0.0.1 <- 200
+20180416 09044440  &  -    00.000.972
+20180416 09044445  "  +    clientRequire/tinymce//skins/lightgray/content.min.css
+20180416 09044445  " http  	127.0.0.1 -> GET clientRequire/tinymce//skins/lightgray/content.min.css
+20180416 09044445  " call  	endpoint clientRequire
+20180416 09044445  " info  	Call clientRequire 
+20180416 09044446  " http  	127.0.0.1 <- 200
+20180416 09044446  "  -    00.002.472
+20180416 09044448  '  +    clientRequire/tinymce//skins/lightgray/fonts/tinymce-small.woff
+20180416 09044448  ' http  	127.0.0.1 -> GET clientRequire/tinymce//skins/lightgray/fonts/tinymce-small.woff
+20180416 09044448  ' call  	endpoint clientRequire
+20180416 09044448  ' info  	Call clientRequire 
+20180416 09044448  ' http  	127.0.0.1 <- 200
+20180416 09044448  '  -    00.003.981
+20180416 09044800  )  +    ubql
+20180416 09044800  ) http  	127.0.0.1 -> POST ubql
+20180416 09044800  ) http  	[{"fieldList":["model","report_code","name","template","code","ID","mi_modifyDate"],"entity":"ubs_report","method":"insert","alsNeed":false,"execParams":{"model":"RequestList","ID":335792779067393,"mi_modifyDate":"2018-04-16T11:04:18.000Z","report_code":"Reqlist_HD_month","name":"Closed request current month"}}]
+20180416 09044800  ) auth  	admin/142472899
+20180416 09044800  ) call  	endpoint ubql
+20180416 09044800  )  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09044800  ) debug 		ubs_report.beforeinsert(TubStorageMixin)
+20180416 09044800  )  -    	00.000.004
+20180416 09044803  )  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09044803  ) debug 		ubs_report.afterinsert(TubStorageMixin)
+20180416 09044803  )  -    	00.009.196
+20180416 09044803  )  +    	ubMixinClasses.TubAuditMixin(02DC4F70).MixinMethod
+20180416 09044803  ) debug 		ubs_report.afterinsert(TubAuditMixin)
+20180416 09044803  )  +    		ubApp.TubDataStore(0DEC0A40).TubDataStore.ExecuteInsertFromSQL
+20180416 09044803  )  +    			ubApp.TubApp(02D73EE0).DBExecute
+20180416 09044803  )  +    				ubApp.TubApp(02D73EE0).TubApp.InternalDBExecute
+20180416 09044803  ) debug 					P1: Int64		335792782802945
+20180416 09044803  ) debug 					P2: String(10)	ubs_report
+20180416 09044803  ) debug 					P3: Int64		335792779067393
+20180416 09044803  ) debug 					P4: String(6)	INSERT
+20180416 09044803  ) debug 					P5: Int64		10
+20180416 09044803  ) debug 					P6: DateTime	2018-04-16T09:04:48
+20180416 09044803  ) debug 					P7: String(9)	127.0.0.1
+20180416 09044803  ) debug 					P8: Int64		335792779067393
+20180416 09044803  ) debug 					P9: String(154..)	{"model":"RequestList","ID":335792779067393,"mi_modifyDate":"2018-04-16T11:04:18Z","report_code":"Re...
+20180416 09044803  ) DB    					StartTransaction for connection "main"
+20180416 09044803  ) SQL   					ubDBSQLite3ThreadSafe.TubSQLite3Statement(18609F60) INSERT INTO uba_auditTrail (ID,entity,entityinfo_id,actionType,actionUser,actionTime,remoteIP,parentEntityInfo_id,toValue) VALUES (?,?,?,?,?,?,?,?,?)
+20180416 09044803  )  -    				00.000.237
+20180416 09044803  )  -    			00.000.240
+20180416 09044803  )  -    		00.000.358
+20180416 09044803  )  -    	00.000.405
+20180416 09044803  ) DB    	Commit connection "main" in 128us
+20180416 09044803  ) http  	127.0.0.1 <- 200
+20180416 09044803  )  -    00.047.242
+20180416 09044806  (  +    ubql
+20180416 09044806  ( http  	127.0.0.1 -> POST ubql
+20180416 09044806  ( http  	[{"entity":"ubs_report","method":"select","fieldList":["ID","model","report_code","name","mi_modifyDate"],"version":"-1"}]
+20180416 09044806  ( auth  	admin/142472899
+20180416 09044806  ( call  	endpoint ubql
+20180416 09044806  ( http  	127.0.0.1 <- 200
+20180416 09044806  (  -    00.008.123
+20180416 09070540  $  +    clientRequire/tinymce//skins/lightgray/fonts/tinymce.woff
+20180416 09070540  $ http  	127.0.0.1 -> GET clientRequire/tinymce//skins/lightgray/fonts/tinymce.woff
+20180416 09070540  $ call  	endpoint clientRequire
+20180416 09070540  $ info  	Call clientRequire 
+20180416 09070540  $ http  	127.0.0.1 <- 200
+20180416 09070540  $  -    00.001.452
+20180416 09094544  #  +    setDocument?ID=335792779067393&attribute=template&entity=ubs_report&filename=newfile.ubreport
+20180416 09094544  # http  	127.0.0.1 -> POST setDocument?ID=335792779067393&attribute=template&entity=ubs_report&filename=newfile.ubreport
+20180416 09094544  # http  	!BIN(958)
+20180416 09094544  # auth  	admin/142472899
+20180416 09094544  # call  	endpoint setDocument
+20180416 09094544  # http  	127.0.0.1 <- 200
+20180416 09094544  #  -    00.012.962
+20180416 09094544  %  +    ubql
+20180416 09094544  % http  	127.0.0.1 -> POST ubql
+20180416 09094544  % http  	[{"fieldList":["model","report_code","name","template","code","ID","mi_modifyDate"],"entity":"ubs_report","method":"update","alsNeed":false,"execParams":{"template":"{\"store\":\"mdb\",\"fName\":\"newfile.ubreport\",\"origName\":\"newfile.ubreport\",\"relPath\":\"\",\"ct\":\"application/ubreport\",\"size\":958,\"md5\":\"597c6349c95c1995f42fbb5504ce9a5d\",\"revision\":1,\"isDirty\":true}","ID":335792779067393,"mi_modifyDate":"2018-04-16T11:04:18.000Z"}}]
+20180416 09094544  % auth  	admin/142472899
+20180416 09094544  % call  	endpoint ubql
+20180416 09094544  %  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09094544  % debug 		ubs_report.beforeupdate(TubStorageMixin)
+20180416 09094547  % EXC   		EMetabaseException {"errorCode":28,"Message":"Update impossible. Record in \"ubs_report\" with ID=335792779067393 not found"} at 0094C5C5 
+20180416 09094547  %  -    	00.032.722
+20180416 09094547  % ERROR 	POST ubql ERROR=500 (Update impossible. Record in "ubs_report" with ID=335792779067393 not found)
+20180416 09094547  %  -    00.033.391
+20180416 09095001  &  +    ubql
+20180416 09095001  & http  	127.0.0.1 -> POST ubql
+20180416 09095001  & http  	[{"fieldList":["model","report_code","name","template","code","ID","mi_modifyDate"],"entity":"ubs_report","method":"update","alsNeed":false,"execParams":{"template":"{\"store\":\"mdb\",\"fName\":\"newfile.ubreport\",\"origName\":\"newfile.ubreport\",\"relPath\":\"\",\"ct\":\"application/ubreport\",\"size\":958,\"md5\":\"597c6349c95c1995f42fbb5504ce9a5d\",\"revision\":1,\"isDirty\":true}","ID":335792779067393,"mi_modifyDate":"2018-04-16T11:04:18.000Z"}}]
+20180416 09095001  & auth  	admin/142472899
+20180416 09095001  & call  	endpoint ubql
+20180416 09095001  &  +    	ubMixinClasses.TubStorageMixin(02DC42C0).MixinMethod
+20180416 09095001  & debug 		ubs_report.beforeupdate(TubStorageMixin)
+20180416 09095003  & EXC   		EMetabaseException {"errorCode":28,"Message":"Update impossible. Record in \"ubs_report\" with ID=335792779067393 not found"} at 0094C5C5 
+20180416 09095003  &  -    	00.021.464
+20180416 09095003  & ERROR 	POST ubql ERROR=500 (Update impossible. Record in "ubs_report" with ID=335792779067393 not found)
+20180416 09095003  &  -    00.022.198
+20180416 09095714  ! info  ubApp.TubApp(02D73EE0) {   "ClientsCurrent": 1,   "ClientsMax": 1,   "Invalid": 3,   "Responses": 74,   "Modified": 0,   "IncomingBytes": 53660,   "OutcomingBytes": 124491,   "OutcomingFiles": 52,   "ServiceCalls": 74,   "ProcessTime": "5.88s"  }

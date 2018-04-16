@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Lorderot/unity_base#readme",
   "dependencies": {
+    "@ub-e/ube-pub": "^4.2.6",
     "@unitybase/adminui-pub": "^4.3.1",
     "@unitybase/ubq": "^4.3.1"
   }
