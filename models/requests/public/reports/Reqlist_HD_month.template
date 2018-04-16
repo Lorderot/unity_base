@@ -1,0 +1,29 @@
+<!--@name "Closed request current month"-->
+<!--@model "RequestList"-->
+
+
+
+
+
+<!--%pageOrientation:portrait--><p style="text-align: center;"><span style="font-size: 18pt;"><strong>Request List current month</strong></span></p>
+<p>current month: {{curMonth}}, year: {{curYear}}</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 14pt;">Closed requests</span></p>
+<table style="word-break: break-all; height: 96px;" width="760" cellspacing="0" cellpadding="3px">
+<tbody>
+<tr style="height: 40px;">
+<td style="width: 180px; background-color: #becdd4; font-weight: bold; text-align: center; vertical-align: middle;">Request date</td>
+<td style="width: 100px; background-color: #becdd4; text-align: center; vertical-align: middle;"><strong>Applicant Info</strong></td>
+<td style="width: 100px; background-color: #becdd4; text-align: center; vertical-align: middle;"><strong>Request text</strong></td>
+<td style="width: 100px; background-color: #becdd4; text-align: center; vertical-align: middle;"><strong>Answer</strong></td>
+</tr>
+<!--{{#data}}--> <!--{{^footer}}-->
+<tr class="tinymce_templated" data-iterate-over="data">
+<td style="text-align: center;"><em>{{reqDate}}</em></td>
+<td style="border: 1px solid #28b449; text-align: center;"><em>{{applicantInfo}}</em></td>
+<td style="text-align: center;"><em>{{reqText}}</em></td>
+<td style="text-align: center;"><em>{{answer}}</em></td>
+</tr>
+<!--{{/footer}}--> <!--{{#footer}}--><!--{{/footer}}--> <!--{{/data}}--></tbody>
+</table>
+<p>&nbsp;</p>
