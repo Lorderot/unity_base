@@ -990,3 +990,4 @@ c:\UnityBase\UB.exe 4.0.0.0 (2018-02-22 16:30:16)Host=WDFN34211327A User=D07186
 20180416 12265658  (  -    00.002.553
 20180416 12265658  " http  	127.0.0.1 <- 200
 20180416 12265658  "  -    00.002.322
+20180416 12280824  ! info  ubApp.TubApp(02883EE0) {   "ClientsCurrent": 1,   "ClientsMax": 1,   "Invalid": 2,   "Responses": 62,   "Modified": 0,   "IncomingBytes": 53065,   "OutcomingBytes": 27068,   "OutcomingFiles": 35,   "ServiceCalls": 62,   "ProcessTime": "2.55s"  }

@@ -1,7 +1,8 @@
 {
  "httpServer": { // Built-in HTTP server configuration
    "host": "+", // Host name for server. +' will bound to all domain names for the specified port
-   "port": "888" //port to listen on
+   "port": "888", //port to listen on
+   "inetPub": "./www"
  },
  "logging": { //Logging configuration
    "levels": [ // Type of events to put to log file. If * all types of errors

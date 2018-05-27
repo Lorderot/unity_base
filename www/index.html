@@ -1,0 +1,78 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+
+    <script src="models\ub-pub\dist\ub-pub.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://unitybase.info/">
+                <img alt="Brand" src="https://unitybase.info/logo.svg" height="30">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li>
+                    <a href="https://git-pub.intecracy.com/unitybase/samples/tree/master/courses/tutorial-v4">Tutorials</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-default navbar-btn navbar-right" style="display: none;"
+                    id="btn-logout-nav">Logout
+            </button>
+            <button type="button" class="btn btn-default navbar-btn navbar-right" id="btn-login-nav">LogIn</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+    <div class="jumbotron" id="welcome-container">
+        <h1>Welcome to CITY PORTAL!</h1>
+        <p>To leave a request, please call <i class="fa fa-phone-square" aria-hidden="true"></i> 2112</p>
+        <p>To get started with the portal, please
+            <button type="button" class="btn btn-primary" id="btn-login-j">LogIn</button>
+        </p>
+    </div>
+    <div id='requests-container' style="display: none;">
+        <h1>MY REQUESTS</h1>
+        <div id="jsGrid" style="margin-bottom: 20px"></div>
+        <button type="button" class="btn btn-primary" id="btn-get-req">Refresh my requests</button>
+    </div>
+
+</div>
+
+
+<div id='popUp' title="Enter the login and password"></div>
+<div id='errDialog' title="Error"></div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">© 2017 City Portal </p>
+    </div>
+</footer>
+</body>
+</html>
